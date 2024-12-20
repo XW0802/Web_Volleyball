@@ -7,6 +7,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>排球少年网站</title>
     <link rel="stylesheet" href="css/style.css">
+
+    <script>
+        // 登录功能
+        function login() {
+            // 获取用户输入的账号和密码
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // 从 localStorage 中获取存储的用户信息
+            const storedUser = localStorage.getItem(username);
+
+            // 如果用户不存在
+            if (!storedUser) {
+                alert("用户不存在，请先注册！");
+                return;
+            }
+
+            // 解析存储的用户信息
+            const user = JSON.parse(storedUser);
+
+            // 验证密码
+            if (user.password === password) {
+                alert("登录成功！");
+                // 登录成功后可以跳转到首页
+                window.location.href = "index.html";
+            } else {
+                alert("密码错误，请重试！");
+            }
+        }
+    </script>
 </head>
 
 <body>
@@ -38,10 +68,10 @@
         <div class="img"><img src="images/bg1.jpg" alt=""></div>
         <div class="cont">
             <div class="title">登录</div>
-            <input type="text" placeholder="请输入账号">
-            <input type="text" placeholder="请输入密码">
+            <input id="username" type="text" placeholder="请输入账号">
+            <input id="password" type="password" placeholder="请输入密码">
 
-            <button>登录</button>
+            <button onclick="login()">登录</button>
         </div>
     </div>
     
@@ -64,5 +94,6 @@
     </div>
 
 </body>
+
 
 </html>

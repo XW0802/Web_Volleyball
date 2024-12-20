@@ -7,6 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>排球少年网站</title>
     <link rel="stylesheet" href="css/style.css">
+    <!-- 引入Swiper的CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+    <!-- 引入Swiper的JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </head>
 
 <body>
@@ -33,10 +38,26 @@
         </div>
     </div>
 
-    <!-- 大图 -->
-    <div class="banner">
-                    <div class="swiper-slide"><img src="images/banner4.jpg" alt=""></div>
+   <!-- 大图轮播图 -->
+<div class="banner">
+    <div class="container">
+        <div class="swiper-bannerSwiper">
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide"><img src="images/banner4.jpg" alt="Banner 4"></div>
+                <div class="swiper-slide"><img src="images/banner1.jpg" alt="Banner 1"></div>
+                 <div class="swiper-slide"><img src="images/banner2.jpg" alt="Banner 2"></div>
+                <div class="swiper-slide"><img src="images/banner3.jpg" alt="Banner 3"></div>
+            </div>
+            <!-- 如果需要分页器 -->
+            <div class="swiper-pagination"></div>
+
+            <!-- 如果需要导航按钮 -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
     </div>
+</div>
 
 
     <div class="video videoInpage commPadding" style="background: none;">
@@ -61,20 +82,30 @@
                 </li>
 
                 <li>
-                    <a href="#">
-                        <div class="img"><img src="images/role3.jpg" alt=""></div>
-                        <h3>音驹高中排球部</h3>
-                        <p>位于东京都的传统强校，以稳健球风和出色防守著称，队中核心孤爪研磨、黑尾铁朗带领众队员凭借默契配合和顽强斗志在赛场上屡创佳绩。</p>
-                        <i>了解更多</i>
-                    </a>
+                 <a href="#">
+                    <div class="img">
+                        <img class="default-img" src="images/role3.jpg" alt="默认图片">
+                        <a href="https://www.bilibili.com/video/BV1F94y1X7vK/?spm_id_from=333.337.search-card.all.click&vd_source=532b94d339b7e14be657cb821b66246e">
+                        <img class="hover-img" src="images/role3-hover.jpg" alt="悬停图片">
+                        </a>
+                    </div>
+                    <h3>音驹高中排球部</h3>
+                    <p>位于东京都的传统强校，以稳健球风和出色防守著称，队中核心孤爪研磨、黑尾铁朗带领众队员凭借默契配合和顽强斗志在赛场上屡创佳绩。</p>
+
+                </a>
                 </li>
 
                 <li>
                     <a href="#">
-                        <div class="img"><img src="images/role4.jpg" alt=""></div>
+                        <div class="img" href="">
+                             <img class="default-img" src="images/role4.jpg" alt="默认图片">
+                            <a href="https://www.bilibili.com/video/BV1iP4y117LM/?spm_id_from=333.337.search-card.all.click&vd_source=532b94d339b7e14be657cb821b66246e">
+                                <img class="hover-img" src="images/role4-hover.jpg" alt="悬停图片">
+                            </a>
+                        </div>
                         <h3>乌野高中排球部</h3>
                         <p>曾辉煌后衰退的排球名校，在训练与比赛中重拾荣耀，以坚韧团结及独特战术和 “怪人组合” 等亮点在排球舞台上奋勇拼搏、绽放光芒。</p>
-                        <i>了解更多</i>
+
                     </a>
                 </li>
             </ul>
@@ -98,7 +129,23 @@
        
     </div>
 
-    
+    <script>
+    var swiper = new Swiper('.swiper-bannerSwiper', {
+        loop: true,  // 启用循环模式
+        autoplay: {
+            delay: 3000,  // 每3秒切换一次
+            disableOnInteraction: false,  // 在用户操作后继续自动播放
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,  // 可以点击分页按钮
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+</script>
 
 </body>
 

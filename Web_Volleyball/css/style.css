@@ -111,7 +111,7 @@ select,
   color: #ed020e;
 }
 
-/* 轮播图
+/* 轮播图 */
 .banner .swiper-pagination-bullet-active {
   background-color: #ed020e;
 }
@@ -133,75 +133,6 @@ select,
   opacity: .3;
   margin: 0 10px !important;
 }
-
-.Disney-news .swiper-pagination-bullet-active {
-  opacity: 1;
-}
-
-.Disney-news .swiper-button-prev,
-.Disney-news .swiper-button-next {
-  top: 48%;
-  width: 44px;
-  height: 44px;
-  background: #fff;
-  border-radius: 100px;
-  box-shadow: 0 0 4px rgba(0, 0, 0, 0.16);
-  color: rgba(0, 0, 0, 0.8);
-  font-weight: 600;
-}
-
-.Disney-news .swiper-button-prev::after,
-.Disney-news .swiper-button-next::after {
-  font-size: 20px;
-}
-
-.Disney-news .swiper-button-prev {
-  left: -22px;
-}
-
-.Disney-news .swiper-button-next {
-  right: -22px;
-}
-
-.Disney-news .swiper-slide {
-  background: #fff;
-  margin-bottom: 50px;
-}
-
-.Disney-news .swiper-slide .img {
-  height: 200px;
-  overflow: hidden;
-}
-
-.Disney-news .swiper-slide .img img {
-  width: 100%;
-  height: 100%;
-}
-
-.Disney-news .swiper-slide .txt {
-  padding: 15px;
-}
-
-.Disney-news .swiper-slide .txt .tip,
-.Disney-news .swiper-slide .txt .time {
-  font-size: 14px;
-  line-height: 30px;
-  height: 30px;
-  color: rgba(0, 0, 0, 0.9);
-}
-
-.Disney-news .swiper-slide .tit {
-  font-size: 20px;
-  margin: 10px 0;
-  line-height: 32px;
-  height: 64px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  word-break: break-all;
-} */
 
 .video {
   background-color: #0A193C;
@@ -284,52 +215,6 @@ select,
   color: #000;
 }
 
-/*.shopDisney ul li {
-  float: left;
-  padding: 10px;
-  width: 50%;
-}
-
-.shopDisney ul li a {
-  width: 100%;
-}
-
-.shopDisney ul li .shop-box-top {
-  position: relative;
-  width: 100%;
-  padding-top: calc(50% - 10px);
-  margin-bottom: 10px;
-}
-
-.shopDisney ul li .shop-box-bottom {
-  position: relative;
-  width: 100%;
-  padding-top: calc(50% - 10px);
-  margin-top: 20px;
-}
-
-.shopDisney ul li .sb-left {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: calc(50% - 10px);
-  height: 100%;
-  background: #ccc;
-}
-
-.shopDisney ul li .sb-left img {
-  width: 100%;
-  height: 100%;
-}
-
-.shopDisney ul li .sb-right {
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: calc(50% - 10px);
-  height: 100%;
-  background: #ccc;
-}*/
 
 .loginBox {
   border-radius: 12px;
@@ -479,7 +364,8 @@ table tr td {
 .info ul li .img {
   width: 200px;
   float: left;
-  margin-right: 15px;
+  margin-right: 20px;
+    margin-left: 0px;
 }
 
 .info ul li .img img {
@@ -496,7 +382,7 @@ table tr td {
 }
 
 .info ul li .txt .tit {
-  margin: 15px 0;
+  margin: 0;
   font-size: 20px;
 }
 
@@ -547,4 +433,147 @@ table tr td {
   font-size: 14px;
   color: rgba(0, 0, 0, 0.5);
   line-height: 1.5;
+}
+
+    .swiper-bannerSwiper {
+    width: 100%;
+    height: 680px;  /* 你可以根据需要调整高度 */
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  /* 保证图片不变形 */
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: #fff;  /* 设置箭头颜色 */
+    font-size: 30px;  /* 设置箭头大小 */
+}
+
+.swiper-pagination {
+    position: absolute;
+    bottom: 10px;
+    text-align: center;
+}
+
+.swiper-pagination-bullet {
+    background-color: #fff;  /* 分页器圆点颜色 */
+}
+
+
+/* 下拉菜单的基本样式 */
+.menu .dropdown {
+    position: relative;
+}
+
+.menu .dropdown .submenu {
+    display: none; /* 默认隐藏子菜单 */
+    position: absolute;
+    top: 100%; /* 菜单显示在下方 */
+    left: 0;
+    background-color: #fff; /* 子菜单的背景色 */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* 子菜单的阴影 */
+    z-index: 10;
+    min-width: 200px; /* 设置子菜单的最小宽度 */
+}
+
+.menu .dropdown:hover .submenu {
+    display: block; /* 鼠标悬停时显示子菜单 */
+}
+
+.submenu li {
+    list-style: none;
+}
+
+.submenu li a {
+    display: block;
+    padding: 10px;
+    color: #333;
+    text-decoration: none;
+}
+
+.submenu li a:hover {
+    background-color: #f0f0f0; /* 鼠标悬停时背景变色 */
+}
+
+
+
+
+/* video图片容器样式 */
+.image-container {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+
+.image-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* 半透明黑色背景 */
+    display: none; /* 默认隐藏 */
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+/* 放大的图片样式 */
+.image-overlay img {
+    max-width: 90%; /* 图片宽度限制 */
+    max-height: 90%; /* 图片高度限制 */
+    border-radius: 20px; /* 圆角 */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6); /* 图片阴影 */
+    transition: transform 0.3s ease; /* 放大过渡效果 */
+}
+
+/* 禁止滚动 */
+body.disable-scroll {
+    overflow: hidden;
+}
+/* 图片容器样式 */
+.img {
+    position: relative;
+    width: 100%; /* 设置图片容器的宽度 */
+    height: 200px; /* 根据需求设置图片高度 */
+    overflow: hidden; /* 确保图片不超出容器 */
+}
+
+/* 默认图片样式 */
+.default-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 保持图片比例 */
+    transition: opacity 0.5s ease-in-out; /* 添加淡入淡出效果 */
+    z-index: 1; /* 确保默认图片在前 */
+    opacity: 1; /* 默认图片完全可见 */
+}
+
+/* 悬停图片样式 */
+.hover-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 保持图片比例 */
+    transition: opacity 0.5s ease-in-out; /* 添加淡入淡出效果 */
+    z-index: 2; /* 确保悬停图片在前 */
+    opacity: 0; /* 默认状态下隐藏 */
+}
+
+/* 鼠标悬停效果 */
+.img:hover .default-img {
+    opacity: 0; /* 默认图片淡出 */
+}
+
+.img:hover .hover-img {
+    opacity: 1; /* 悬停图片淡入 */
 }
