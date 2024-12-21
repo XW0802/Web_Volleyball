@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>排球少年网站</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <script>
+        // 注册功能
+        function register() {
+            // 获取用户输入的账号和密码
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // 检查输入是否为空
+            if (!username || !password) {
+                alert("账号或密码不能为空！");
+                return;
+            }
+
+            // 检查用户名是否已经存在
+            if (localStorage.getItem(username)) {
+                alert("该用户已存在，请直接登录！");
+                return;
+            }
+
+            // 将用户信息存储到 localStorage
+            const user = {
+                username: username,
+                password: password
+            };
+            localStorage.setItem(username, JSON.stringify(user));
+
+            alert("注册成功，请登录！");
+            // 注册成功后跳转到登录页面
+            window.location.href = "login.html";
+        }
+    </script>
+</head>
+
+<body>
+    <!-- 头部 -->
+    <div class="header">
+        <div class="container cl">
+            <div class="left fl">
+                <a href="index.html" class="logo fl"><img src="images/logo.jpg" alt=""></a>
+
+                <!-- 导航栏 -->
+                <ul class="menu fl">
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="news.html">资讯</a></li>
+                    <li><a href="video.html">影视</a></li>
+                    <li><a href="person.html">角色介绍</a></li>
+                </ul>
+            </div>
+            <div class="right fr">
+                <ul>
+                    <li><a href="login.html">登录</a></li>
+                    <li><a href="register.html" class="active">注册</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- register -->
+    <div class="loginBox cl">
+
+        <div class="cont">
+
+            <div class="title">注册</div>
+            <input id="username" type="text" placeholder="请输入账号">
+            <input id="password" type="password" placeholder="请输入密码">
+            <button onclick="register()">注册</button>
+
+
+        </div>
+
+        <div class="img"><img src="images/bg2.jpg" alt="" height="466"></div>
+    </div>
+
+    <!-- 底部 -->
+    <div class="footer">
+        <div class="foot-logo">
+            <img src="images/logo.jpg" alt="">
+        </div>
+        <div class="foot-menu">
+            <ul>
+                <li><a href="#">关于我们</a></li>
+                <li><a href="#">加入我们</a></li>
+            </ul>
+        </div>
+        <div class="foot-wx">
+            <img src="images/wx.jpg" alt="">
+            <p>快来，加入信息学院排球队吧!!!</p>
+        </div>
+    </div>
+
+</body>
+
+</html>

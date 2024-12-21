@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>排球少年网站</title>
+    <link rel="stylesheet" href="css/style.css">
+     <!-- 引入Swiper的CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+    <!-- 引入Swiper的JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</head>
+
+<body>
+    <!-- 头部 -->
+    <div class="header">
+        <div class="container cl">
+            <div class="left fl">
+                <a href="index.html" class="logo fl"><img src="images/logo.jpg" alt=""></a>
+
+                <!-- 导航栏 -->
+                <ul class="menu fl">
+                    <li><a href="index.html">首页</a></li>
+                    <!-- 资讯菜单，添加下拉列表 -->
+                <li class="dropdown">
+                    <a href="news.html" class="active">资讯</a>
+                    <ul class="submenu">
+                        <li><a href="#volleyball-news">排球少年资讯速递</a></li>
+                        <li><a href="#xin-yuan-volleyball">信院排球速递</a></li>
+                    </ul>
+                </li>
+                <li><a href="video.html">影视</a></li>
+                <li><a href="person.html">角色介绍</a></li>
+            </ul>
+            </div>
+            <div class="right fr">
+                <ul>
+                    <li><a href="login.html">登录</a></li>
+                    <li><a href="register.html">注册</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 大图轮播图 -->
+<div class="banner">
+    <div class="container">
+        <div class="swiper-bannerSwiper">
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide"><img src="images/banner2.jpg" alt="Banner 2"></div>
+                <div class="swiper-slide"><img src="images/banner3.jpg" alt="Banner 3"></div>
+                <div class="swiper-slide"><img src="images/banner4.jpg" alt="Banner 4"></div>
+                <div class="swiper-slide"><img src="images/banner1.jpg" alt="Banner 1"></div>
+            </div>
+            <!-- 如果需要分页器 -->
+            <div class="swiper-pagination"></div>
+
+            <!-- 如果需要导航按钮 -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </div>
+</div>
+
+    <!-- 资讯 -->
+    <div class="container">
+        <div class="info">
+            <ul>
+             <li>
+<!--                    <a href="#">-->
+                        <div class="img"><img src="images/news5.jpg" alt=""></div>
+                        <div class="txt" id="volleyball-news">
+                            <h2>信院排球速递</h2>
+                            <p class="tit">信息学院排球队斩获“双冠”！！！</p>
+                            <p class="time">2024-10-21</p>
+                        </div>
+<!--                    </a>-->
+                </li>
+                <li>
+<!--                    <a href="#">-->
+                        <div class="img"><img src="images/news1.jpg" alt=""></div>
+                       <div class="txt" id="xin-yuan-volleyball">
+                             <h2>排球少年资讯速递</h2>
+                           <!--<p class="tag">排球资讯速递</p>-->
+                            <p class="tit">《排球少年！！垃圾场决战》上映！！！</p>
+                            <p class="time">2024-06-15</p>
+                       </div>
+<!--                    </a>-->
+                </li>
+
+                <li>
+<!--                    <a href="#">-->
+                    <div class="img"><img src="images/news2.jpg" alt=""></div>
+                    <div class="txt" >
+                        <p class="tag"></p>
+                        <p class="tit">影山飞雄生日快乐！！！</p>
+                        <p class="time">2023-12-22</p>
+                    </div>
+<!--                    </a>-->
+                </li>
+               
+            </ul>
+        </div>
+    </div>
+
+    <!-- 底部 -->
+    <div class="footer">
+        <div class="foot-logo">
+            <img src="images/logo.jpg" alt="">
+        </div>
+        <div class="foot-menu">
+            <ul>
+                <li><a href="#">关于我们</a></li>
+                <li><a href="#">加入我们</a></li>
+            </ul>
+        </div>
+        <div class="foot-wx">
+            <img src="images/wx.jpg" alt="">
+            <p>快来，加入信息学院排球队吧！！！</p>
+        </div>
+        
+    </div>
+
+   <script>
+    var swiper = new Swiper('.swiper-bannerSwiper', {
+        loop: true,  // 启用循环模式
+        autoplay: {
+            delay: 3000,  // 每3秒切换一次
+            disableOnInteraction: false,  // 在用户操作后继续自动播放
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,  // 可以点击分页按钮
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+</script>
+
+</body>
+
+</html>
