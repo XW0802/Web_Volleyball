@@ -1,4 +1,4 @@
-@charset "UTF-8";
+
 * {
   margin: 0;
   padding: 0;
@@ -104,7 +104,7 @@ select,
 
 .header .right ul li a {
   font-size: 18px;
-  padding: 5px 10px;
+  padding: 10px;
 }
 
 .header .right ul li a.active {
@@ -131,7 +131,7 @@ select,
   display: inline-block;
   background: #1b1b1c;
   opacity: .3;
-  margin: 0 10px !important;
+  margin: 10px !important;
 }
 
 .video {
@@ -438,21 +438,22 @@ table tr td {
   line-height: 1.5;
 }
 
+/*
     .swiper-bannerSwiper {
     width: 100%;
-    height: 680px;  /* 你可以根据需要调整高度 */
+    height: 680px;  !* 你可以根据需要调整高度 *!
 }
 
 .swiper-slide img {
     width: 100%;
     height: 100%;
-    object-fit: cover;  /* 保证图片不变形 */
+    object-fit: cover;  !* 保证图片不变形 *!
 }
 
 .swiper-button-next,
 .swiper-button-prev {
-    color: #fff;  /* 设置箭头颜色 */
-    font-size: 30px;  /* 设置箭头大小 */
+    color: #fff;  !* 设置箭头颜色 *!
+    font-size: 30px;  !* 设置箭头大小 *!
 }
 
 .swiper-pagination {
@@ -462,7 +463,56 @@ table tr td {
 }
 
 .swiper-pagination-bullet {
+    background-color: #fff;  !* 分页器圆点颜色 *!
+}
+*/
+/* 轮播图容器 */
+.swiper-bannerSwiper {
+    width: 100%;
+    height: 680px;  /* 可以根据需要调整高度 */
+    position: relative;  /* 确保分页器和按钮定位正确 */
+    overflow: hidden;  /* 隐藏多余的内容 */
+}
+
+/* 每个滑动项 */
+.swiper-slide {
+    width: 100%;
+    height: 100%;
+}
+
+/* 图片适配 */
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  /* 保证图片不变形并适应容器 */
+}
+
+/* 上下箭头样式 */
+.swiper-button-next,
+.swiper-button-prev {
+    color: #fff;  /* 设置箭头颜色 */
+    font-size: 30px;  /* 设置箭头大小 */
+    z-index: 10;  /* 确保箭头在图片层之上 */
+}
+
+/* 分页器 */
+.swiper-pagination {
+    position: absolute;
+    bottom: 10px;  /* 分页器距离底部10px */
+    left: 50%;
+    transform: translateX(-50%);  /* 确保分页器居中 */
+    text-align: center;
+}
+
+/* 分页器圆点样式 */
+.swiper-pagination-bullet {
     background-color: #fff;  /* 分页器圆点颜色 */
+    opacity: 0.6;  /* 设置未选中时的透明度 */
+}
+
+/* 当前分页圆点的样式 */
+.swiper-pagination-bullet-active {
+    opacity: 1;  /* 当前页圆点完全不透明 */
 }
 
 
