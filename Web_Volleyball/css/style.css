@@ -1,0 +1,582 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-size: 16px;
+  color: #000;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select,
+[role="button"] {
+  outline: 0;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+/* 清除浮动 */
+.cl::after {
+  content: "";
+  clear: both;
+  display: block;
+  visibility: hidden;
+}
+
+.container {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.commPadding {
+  padding: 40px 80px;
+}
+
+.commTitle {
+  text-align: center;
+  font-size: 24px;
+  line-height: 1.5;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.header {
+  padding: 15px 20px;
+  background-color: #fff;
+}
+
+.header .logo img {
+  height: 50px;
+}
+
+.header .menu {
+  margin-left: 20px;
+  margin-top: 15px;
+}
+
+.header .menu li {
+  float: left;
+}
+
+.header .menu li a {
+  display: block;
+  font-size: 18px;
+  padding: 5px 20px;
+}
+
+.header .menu li a.active {
+  color: #ed020e;
+}
+
+.header .right ul {
+  margin-top: 15px;
+}
+
+.header .right ul li {
+  float: left;
+}
+
+.header .right ul li a {
+  font-size: 18px;
+  padding: 5px 10px;
+}
+
+.header .right ul li a.active {
+  color: #ed020e;
+}
+
+/* 轮播图 */
+.banner .swiper-pagination-bullet-active {
+  background-color: #ed020e;
+}
+
+.news {
+  background-color: #f1f2f3;
+}
+
+.Disney-news {
+  position: relative;
+}
+
+.Disney-news .swiper-pagination-bullet {
+  width: 6px;
+  height: 6px;
+  border-radius: 50px;
+  display: inline-block;
+  background: #1b1b1c;
+  opacity: .3;
+  margin: 0 10px !important;
+}
+
+.video {
+  background-color: #0A193C;
+}
+
+.video .commTitle {
+  color: #fff;
+}
+
+.video ul li {
+  position: relative;
+  float: left;
+  padding: 10px;
+  width: 50%;
+}
+
+.video ul li a {
+  display: block;
+  text-align: center;
+}
+
+.video ul li .img {
+  margin: 0 0 20px;
+  display: block;
+  width: 100%;
+  padding-top: 56.44%;
+  overflow: hidden;
+  position: relative;
+}
+
+.video ul li .img img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  object-fit: cover;
+  -moz-transition: all .5s;
+  -webkit-transition: all .5s;
+  -o-transition: all .5s;
+  -ms-transition: all .5s;
+  transition: all .5s;
+}
+
+.video ul li h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #fff;
+  text-align: center;
+  margin: 0 0 10px;
+}
+
+.video ul li p {
+  font-size: 16px;
+  line-height: 26px;
+  height: 52px;
+  color: #fff;
+  text-align: center;
+  margin: 0 0 10px;
+  padding: 0 15px;
+  overflow: hidden;
+}
+
+.video ul li i {
+  font-size: 18px;
+  font-style: normal;
+  color: #fff;
+  font-weight: 600;
+  position: relative;
+}
+
+.videoInpage {
+  padding: 40px 80px;
+}
+
+.videoInpage ul li h3,
+.videoInpage ul li p,
+.videoInpage ul li i {
+  color: #000;
+}
+
+
+.loginBox {
+  border-radius: 12px;
+  margin: 100px auto;
+  width: 1000px;
+  box-shadow: 0 0 10px #9abaf3;
+}
+
+.loginBox .img {
+    width: 50%; /* 设置宽度为容器的一半 */
+    height: auto;  /*自动调整高度，确保比例 */
+    flex-shrink: 0; /* 防止图片被挤压 */
+    float: left
+}
+
+.loginBox .img img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+
+.loginBox .cont {
+  float: left;
+  background-color: #fff;
+  text-align: center;
+  width: 500px;
+  padding-bottom: 16px;
+}
+
+.loginBox .cont .title {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 16px;
+  padding-top: 16px;
+}
+
+.loginBox .cont input {
+  border: 1px solid #d1d3e2;
+  background-color: #fff;
+  display: block;
+  font-size: 16px;
+  height: 42px;
+  border-radius: 40px;
+  margin: 20px auto;
+  width: 420px;
+  padding: 0 15px;
+  outline: 0;
+}
+
+.loginBox .cont button {
+  width: 452px;
+  height: 44px;
+  background-color: #2277ba;
+  color: #fff;
+  border-radius: 40px;
+  font-size: 16px;
+  outline: 0;
+  border: 0;
+}
+
+/* 角色介绍 */
+table {
+  text-align: center;
+  border-collapse: collapse;
+}
+
+table,
+table tr th,
+table tr td {
+  border: 1px solid #a8aeb2;
+  padding: 5px 10px;
+}
+
+.touxiang {
+  width: 160px;
+}
+
+.person {
+  margin-top: 30px;
+}
+
+.person caption {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.person table {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.shop {
+  padding: 40px 80px;
+}
+
+.shop ul li {
+  float: left;
+  width: 20%;
+  padding: 10px;
+}
+
+.shop ul li a {
+  display: block;
+  width: 100%;
+  border: 1px solid #ddd;
+}
+
+.shop ul li a:hover {
+  border-color: #ed020e;
+}
+
+.shop ul li a:hover p {
+  color: #000;
+}
+
+.shop ul li a img {
+  width: 100%;
+  height: 250px;
+}
+
+.shop ul li a .txt {
+  padding: 10px;
+}
+
+.shop ul li a .price {
+  font-weight: bold;
+  color: #ed020e;
+  margin-bottom: 5px;
+}
+
+.shop ul li a p {
+  color: #666;
+  line-height: 20px;
+  height: 40px;
+  overflow: hidden;
+}
+
+.info {
+  padding: 40px 80px;
+}
+
+.info ul li {
+  height: 150px;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 20px;
+  display: flex; /* 使用flexbox让内容自动对齐 */
+}
+
+.info ul li .img {
+  width: 200px;
+  float: left;
+  margin-right: 20px;
+  margin-left: 0;
+}
+
+.info ul li .img img {
+  width: 100%;
+  height: 130px;
+}
+
+.info ul li .txt {
+  float: left;
+}
+
+.info ul li .txt .tag {
+  color: #666;
+}
+
+.info ul li .txt .tit {
+  margin: 0;
+  font-size: 20px;
+}
+
+.info ul li .txt .time {
+  font-size: 14px;
+  color: #999;
+}
+
+.footer {
+  text-align: center;
+  background: #fff;
+  padding: 40px 20px;
+}
+
+.footer .foot-logo img {
+  height: 40px;
+}
+
+.footer .foot-menu {
+  margin: 15px 0;
+}
+
+.footer .foot-menu ul li {
+  display: inline-block;
+  padding: 0 20px;
+}
+
+.footer .foot-wx img {
+  display: block;
+  margin: 0 auto 5px;
+  width: 120px;
+  height: 120px;
+  border: 1px solid #ddd;
+}
+
+.footer .foot-wx p {
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.5);
+  margin-top: 10px;
+}
+
+.footer .statment {
+  padding-top: 20px;
+}
+
+.footer .statment p,
+.footer .statment a {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.5);
+  line-height: 1.5;
+}
+
+    .swiper-bannerSwiper {
+    width: 100%;
+    height: 680px;  /* 你可以根据需要调整高度 */
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  /* 保证图片不变形 */
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: #fff;  /* 设置箭头颜色 */
+    font-size: 30px;  /* 设置箭头大小 */
+}
+
+.swiper-pagination {
+    position: absolute;
+    bottom: 10px;
+    text-align: center;
+}
+
+.swiper-pagination-bullet {
+    background-color: #fff;  /* 分页器圆点颜色 */
+}
+
+
+/* 下拉菜单的基本样式 */
+.menu .dropdown {
+    position: relative;
+}
+
+.menu .dropdown .submenu {
+    display: none; /* 默认隐藏子菜单 */
+    position: absolute;
+    top: 100%; /* 菜单显示在下方 */
+    left: 0;
+    background-color: #fff; /* 子菜单的背景色 */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* 子菜单的阴影 */
+    z-index: 10;
+    min-width: 200px; /* 设置子菜单的最小宽度 */
+}
+
+.menu .dropdown:hover .submenu {
+    display: block; /* 鼠标悬停时显示子菜单 */
+}
+
+.submenu li {
+    list-style: none;
+}
+
+.submenu li a {
+    display: block;
+    padding: 10px;
+    color: #333;
+    text-decoration: none;
+}
+
+.submenu li a:hover {
+    background-color: #f0f0f0; /* 鼠标悬停时背景变色 */
+}
+
+
+
+
+/* video图片容器样式 */
+.image-container {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+
+.image-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* 半透明黑色背景 */
+    display: none; /* 默认隐藏 */
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+/* 放大的图片样式 */
+.image-overlay img {
+    max-width: 90%; /* 图片宽度限制 */
+    max-height: 90%; /* 图片高度限制 */
+    border-radius: 20px; /* 圆角 */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6); /* 图片阴影 */
+    transition: transform 0.3s ease; /* 放大过渡效果 */
+}
+
+/* 禁止滚动 */
+body.disable-scroll {
+    overflow: hidden;
+}
+/* 图片容器样式 */
+.img {
+    position: relative;
+    width: 100%; /* 设置图片容器的宽度 */
+    height: 200px; /* 根据需求设置图片高度 */
+    overflow: hidden; /* 确保图片不超出容器 */
+}
+
+/* 默认图片样式 */
+.default-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 保持图片比例 */
+    transition: opacity 0.5s ease-in-out; /* 添加淡入淡出效果 */
+    z-index: 1; /* 确保默认图片在前 */
+    opacity: 1; /* 默认图片完全可见 */
+}
+
+/* 悬停图片样式 */
+.hover-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 保持图片比例 */
+    transition: opacity 0.5s ease-in-out; /* 添加淡入淡出效果 */
+    z-index: 2; /* 确保悬停图片在前 */
+    opacity: 0; /* 默认状态下隐藏 */
+}
+
+/* 鼠标悬停效果 */
+.img:hover .default-img {
+    opacity: 0; /* 默认图片淡出 */
+}
+
+.img:hover .hover-img {
+    opacity: 1; /* 悬停图片淡入 */
+}

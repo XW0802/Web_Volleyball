@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>排球少年网站</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <script>
+        // 登录功能
+        function login() {
+            // 获取用户输入的账号和密码
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // 从 localStorage 中获取存储的用户信息
+            const storedUser = localStorage.getItem(username);
+
+            // 如果用户不存在
+            if (!storedUser) {
+                alert("用户不存在，请先注册！");
+                return;
+            }
+
+            // 解析存储的用户信息
+            const user = JSON.parse(storedUser);
+
+            // 验证密码
+            if (user.password === password) {
+                alert("登录成功！");
+                // 登录成功后可以跳转到首页
+                window.location.href = "index.html";
+            } else {
+                alert("密码错误，请重试！");
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <!-- 头部 -->
+    <div class="header">
+        <div class="container cl">
+            <div class="left fl">
+                <a href="index.html" class="logo fl"><img src="images/logo.jpg" alt=""></a>
+
+                <!-- 导航栏 -->
+                <ul class="menu fl">
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="news.html">资讯</a></li>
+                    <li><a href="video.html">影视</a></li>
+                    <li><a href="person.html">角色介绍</a></li>
+                </ul>
+            </div>
+            <div class="right fr">
+                <ul>
+                    <li><a href="login.html" class="active">登录</a></li>
+                    <li><a href="register.html">注册</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- login -->
+    <div class="loginBox cl">
+        <div class="img"><img src="images/bg1.jpg" alt=""></div>
+        <div class="cont">
+            <div class="title">登录</div>
+            <input id="username" type="text" placeholder="请输入账号">
+            <input id="password" type="password" placeholder="请输入密码">
+
+            <button onclick="login()">登录</button>
+        </div>
+    </div>
+    
+    
+    <!-- 底部 -->
+    <div class="footer">
+        <div class="foot-logo">
+            <img src="images/logo.jpg" alt="">
+        </div>
+        <div class="foot-menu">
+            <ul>
+                <li><a href="#">关于我们</a></li>
+                <li><a href="#">加入我们</a></li>
+            </ul>
+        </div>
+        <div class="foot-wx">
+            <img src="images/wx.jpg" alt="">
+            <p>快来，加入信息学院排球队吧！！！</p>
+        </div>
+    </div>
+
+</body>
+
+
+</html>
